@@ -9,6 +9,7 @@ from torch import Tensor
 from torch import nn
 
 from .transcribe import transcribe as transcribe_function
+from .streaming_transcribe import streaming_transcribe as streaming_transcribe_function
 from .decoding import detect_language as detect_language_function, decode as decode_function
 
 
@@ -265,4 +266,5 @@ class Whisper(nn.Module):
 
     detect_language = detect_language_function
     transcribe = transcribe_function
+    streaming_transcribe = streaming_transcribe_function
     decode = decode_function
